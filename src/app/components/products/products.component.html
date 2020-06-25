@@ -1,1 +1,21 @@
-<p>products works!</p>
+  
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Desciption</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let product of products">
+      <tr>
+        <th scope="row">{{product.id}}</th>
+        <td>{{product.name}}<</td>
+        <td>{{product.description}}</td>
+        <td>{{product.price}}</td>
+        <td>{{product.quantity}}</td>
+      </tr>
+    </tbody>
+  </table>
