@@ -45,13 +45,10 @@ export class AppComponent implements OnInit {
   }
 
   updateItem(updateForm){
-    console.log(updateForm.value.name);
     this.newShoppingItem.id = this.itemToBeUpdated.id;
     this.newShoppingItem.name = updateForm.value.name;
     this.store.dispatch(new UpdateItemAction(this.newShoppingItem));
-
     this.newShoppingItem = {id:'', name:''};
-
     this.isUpdateActivated = true;
   }
   deleteItem(id: string){
