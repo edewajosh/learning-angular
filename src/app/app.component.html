@@ -6,9 +6,20 @@
       </h2>
 
         <ul *ngIf="(shoppingItems | async); else noItems">
-          <li *ngFor="let shopping of shoppingItems | async" (click)="deleteItem(shopping.id)">
-            <span>{{ shopping.name }}</span>
-          </li>
+          <div style="justify-content: space-evenly;">
+            <li *ngFor="let shopping of shoppingItems | async" >
+              <span>{{ shopping.name }}</span>
+              <button class="btn btn-primary ml-5" (click)="showUpdateForm(shopping)">Edit</button>
+              <button class="btn btn-danger ml-3" (click)="deleteItem(shopping.id)">Delete</button>
+            </li>
+            <form *ngIf="isUpdateActivated" (ngSubmit)="updateItem(updateForm)" #updateForm="ngForm" class=" form-inline mt-2">
+              <div class="form-group" >
+                <input type="text" id="name" name="name" [(ngModel)]="itemToBeUpdated.name" class="form-control ml-4 mr-2">
+                <button type="submit" class="btn btn-primary">Update</button>
+              </div>
+            </form>
+          </div>
+          
         </ul>
 
       <ng-template #noItems>
@@ -18,7 +29,7 @@
       </ng-template>
     </div>
 
-    <form (ngSubmit)="addItem()">
+    <form (ngSubmit)="addItem()" *ngIf="!isUpdateActivated">
       <input type="text" [(ngModel)]="newShoppingItem.name" placeholder="Item" name="itemName"/>
       <button type="submit" >+</button>
     </form>

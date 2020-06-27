@@ -1,12 +1,24 @@
 {
   "shopping": [
     {
-      "id": 1,
-      "name": "Pepsi Max"
+      "id": "47ecd500-99d3-4b16-99b4-28d9acc048ea",
+      "name": "Exe Unga"
     },
     {
-      "id": "7ecb5096-ef2a-4476-8340-ef0ceccd5f77",
-      "name": "John Doe"
+      "id": "49d71b8e-f2a8-4e4a-ab0b-11ef998da327",
+      "name": "New Pepsi"
+    },
+    {
+      "id": "f29cb5f1-4854-4e60-9dea-57ac3e7a7528",
+      "name": "Pishori Rice 5"
+    },
+    {
+      "id": "15b32761-ca29-4a93-bbab-9dadd8161fdf",
+      "name": "Coke Zero"
+    },
+    {
+      "id": "0ba7fce4-2cbe-4f4f-a522-dcadf49e9997",
+      "name": "Ribena black"
     }
   ]
 }

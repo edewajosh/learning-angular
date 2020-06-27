@@ -57,3 +57,12 @@
   .loading {
     box-shadow: 20px 20px 0px pink !important;
   }
+  form {
+    display: inline;
+    align-items: center;
+  }
+
+  .actions {
+    display: block;
+    justify-content: space-evenly;
+  }

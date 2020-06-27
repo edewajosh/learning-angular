@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Actions, Effect, ofType } from '@ngrx/effects';
-import { LoadShoppingAction, ShoppingActionTypes, LoadShoppingSuccessAction, LoadShoppingFailureAction, AddItemSuccessAction, AddItemAction, AddItemFailureAction, DeleteItemAction, DeleteItemSuccessAction, DeleteItemFailureAction } from '../actions/shopping.action';
+import { Actions, Effect, ofType, EffectsRootModule } from '@ngrx/effects';
+import { LoadShoppingAction, ShoppingActionTypes, LoadShoppingSuccessAction, LoadShoppingFailureAction, AddItemSuccessAction, AddItemAction, AddItemFailureAction, DeleteItemAction, DeleteItemSuccessAction, DeleteItemFailureAction, UpdateItemAction, UpdateItemASuccessAction, UpdateItemFailureAction } from '../actions/shopping.action';
 import { mergeMap, map, catchError } from 'rxjs/operators';
 import { ShoppingService } from 'src/app/shopping.service';
 import { of } from 'rxjs';
@@ -35,16 +35,29 @@ export class ShoppingEffects {
       )
   )
   
-  @Effect() deleteShoppingItem$ = this.actions$
-    .pipe(
-      ofType<DeleteItemAction>(ShoppingActionTypes.DELETE_ITEM),
-      mergeMap(
-        (data) => this.shoppingService.deleteShoppingItem(data.payload)
-          .pipe(
-            map(() => new DeleteItemSuccessAction(data.payload)),
-            catchError(error => of(new DeleteItemFailureAction(error)))
-          )
-      )
+    @Effect() deleteShoppingItem$ = this.actions$
+        .pipe(
+        ofType<DeleteItemAction>(ShoppingActionTypes.DELETE_ITEM),
+        mergeMap(
+            (data) => this.shoppingService.deleteShoppingItem(data.payload)
+            .pipe(
+                map(() => new DeleteItemSuccessAction(data.payload)),
+                catchError(error => of(new DeleteItemFailureAction(error)))
+            )
+        )
+    )
+    
+    
+    @Effect() updateShoppingItem$ = this.actions$
+        .pipe (
+        ofType<UpdateItemAction>(ShoppingActionTypes.UPDATE_ITEM),
+        mergeMap(
+            (data) => this.shoppingService.updateShoppingItem(data.payload)
+            .pipe(
+                map(() => new UpdateItemASuccessAction(data.payload)),
+                catchError(error => of(new UpdateItemFailureAction(error)))
+            )
+        )
     )
 
     constructor(private actions$: Actions, private shoppingService: ShoppingService){}
