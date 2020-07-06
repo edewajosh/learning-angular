@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-plus-jwt"
+    }
+  },
+  "defaultProject": "angular-plus-jwt",
+  "cli": {
+    "analytics": "a7965f3a-62bb-48c4-a9e4-0b8d2e646d9e"
+  }
 }
