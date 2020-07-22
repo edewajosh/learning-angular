@@ -1,0 +1,8 @@
+<div class="container-fluid">
+  <p class="h4">{{ product.name}}
+    <button class="btn btn-info btn-sm" (click)="addProductToCart(product)">+</button>
+  </p>
+  <img class="img-fluid" src="assets/product/fqffqfqfq.png">
+
+<p class="lead">{{product.price.toLocaleString('en-US', {style: 'currency', currency: 'KSH'})}}</p>
+</div>
