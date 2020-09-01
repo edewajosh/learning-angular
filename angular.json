@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -119,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ngrx-state-mngt"
+    }
+  },
+  "defaultProject": "ngrx-state-mngt",
+  "cli": {
+    "analytics": "c7b4ea19-ad07-4a8e-853a-ccb2c5754d35"
+  }
 }
