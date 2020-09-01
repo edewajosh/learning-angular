@@ -7,3 +7,7 @@
 .navbar-nav{
   margin-left: auto;
 }
+
+.nav-link, .navbar-brand{
+  color: #FFFFFF;
+}
