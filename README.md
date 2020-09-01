@@ -4,8 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Resources
 
-* simple-angular-app-using-ngrx-8-store-and-effects-factory-methods [Link](https://medium.com/@RupaniChirag/simple-angular-app-using-ngrx-8-store-and-effects-factory-methods-f3423b9f6d3b)
-* Ngrx Documentation [Link](https://ngrx.io/guide)
+* simple-angular-app-using-ngrx-8-store-and-effects-factory-methods [Medium Article](https://medium.com/@RupaniChirag/simple-angular-app-using-ngrx-8-store-and-effects-factory-methods-f3423b9f6d3b)
+* Ngrx Documentation [Docs](https://ngrx.io/guide)
 
 #### Development server
 
