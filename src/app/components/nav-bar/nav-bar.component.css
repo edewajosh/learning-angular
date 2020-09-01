@@ -1,0 +1,9 @@
+.navbar{
+  background: #987465;
+  font-family: Monaco, "Lucida Console", monospace;
+  font-weight: normal;
+  font-size: 23px;
+}
+.navbar-nav{
+  margin-left: auto;
+}
