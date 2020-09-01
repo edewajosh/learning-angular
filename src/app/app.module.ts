@@ -14,12 +14,14 @@ import {FormsModule} from '@angular/forms';
 import {TodoReducer} from './state/todos/todo.reducer';
 import {TodoEffects} from './state/todos/todo.effects';
 import {HttpClientModule} from '@angular/common/http';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MyCounterComponent,
-    ToDoComponent
+    ToDoComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
